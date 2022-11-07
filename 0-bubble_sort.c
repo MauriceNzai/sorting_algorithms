@@ -1,5 +1,14 @@
 #include "sort.h"
 
+/**
+ * bubble_sort - sorts an array of integers
+ *
+ * @array: the array to sort
+ * @size: the size of the array
+ *
+ * Return: Nothing
+ */
+
 void bubble_sort(int *array, size_t size)
 {
 	unsigned int i, temp, swapped;
@@ -15,9 +24,9 @@ void bubble_sort(int *array, size_t size)
 				array[i] = array[i + 1];
 				array[i + 1] = temp;
 
-				swapped = 1; 
+				swapped = 1;
 				print_array(array, size);
 			}
 		}
-	} while (swapped); 
+	} while (swapped);
 }
