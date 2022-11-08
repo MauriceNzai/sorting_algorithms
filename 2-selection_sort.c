@@ -11,7 +11,7 @@
 
 void selection_sort(int *array, size_t size)
 {
-	unsigned int i, j, position;
+	unsigned int i, j, position, temp;
 
 	/* Traverse unsorted subarray one by one and find minimu element */
 	for (i = 0; i < size - 1; i++)
@@ -20,32 +20,16 @@ void selection_sort(int *array, size_t size)
 
 		for (j = i + 1; j < size; j++)
 		{
-			if (array[j] < array[position])			
+			if (array[j] < array[position])
 				position = j;
 		}
 		/* if less than value at min index(position), swap with current min value i*/
 		if (position != i)
 		{
-			swap(&array[position], &array[i]);
+			temp = array[position];
+			array[position] = array[i];
+			array[i] = temp;
 			print_array(array, size);
 		}
 	}
-}
-
-/**
- * swap - swaps elements of an array
- *
- * @mall: small element
- * @large: large element
- *
- * Return: Nothing
- */
-
-void swap(int *small, int *large)
-{
-	int temp;
-
-	temp = *small;
-	*small = *large;
-	*large = temp;
 }
