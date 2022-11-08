@@ -1,20 +1,6 @@
 #include "sort.h"
 
 /**
- * swap - swaps elements of an array
- * @small: small element
- * @large: large element
- * Return: Nothing
- */
-void swap(int *small, int *large)
-{
-	int temp;
-
-	temp = *small;
-	*small = *large;
-	*large = temp;
-}
-/**
  * lomuto_partition - partitions the given array based on lamuto algorithm
  * @array: the array to partition
  * @low: the lower index of any given two elements
