@@ -26,6 +26,7 @@ void copy_array(int *array, size_t start, size_t end, int *array_copy)
  * @start: the starting index
  * @mid: the mid index
  * @end: the end index
+ * @array_copy: the working array
  * Description: left source half is array[start:mid-1]
  * right source half is array[mid:end-1]
  * copy array result is array_coppy[start:end-1]
@@ -51,17 +52,17 @@ void top_down_merge(int *array, size_t start,
 	{
 		/* if left run head exists and is <= existing right run head */
 		if (i < mid && (j >= end || array[i] <= array[j]))
-	       	{
+		{
 			array_copy[k] = array[i];
-		       	i++;
+			i++;
 		}
-	       	else
-	       	{
+		else
+		{
 			array_copy[k] = array[j];
-		       	j++;
-	       	}
+			j++;
+		}
 	}
-       	printf("[Done]: ");
+	printf("[Done]: ");
 	print_array(array_copy + start, end - start);
 }
 
