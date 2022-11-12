@@ -33,6 +33,9 @@ void merge_sort(int *array, size_t size);
 void top_down_split_merge(int *array_copy, size_t start, size_t end, int *array);
 void top_down_merge(int *array, size_t start, size_t mid, size_t end, int *array_copy);
 void copy_array(int *array, size_t start, size_t end, int *array_copy);
+int max (int *array, size_t size, size_t i, size_t j, size_t k);
+void sift_down_heap (int *array, size_t size, size_t i);
+void heap_sort(int *array, size_t size);
 
 
 
