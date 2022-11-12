@@ -36,6 +36,9 @@ void copy_array(int *array, size_t start, size_t end, int *array_copy);
 int max (int *array, size_t size, size_t i, size_t j, size_t k);
 void sift_down_heap (int *array, size_t size, size_t i);
 void heap_sort(int *array, size_t size);
+void quick_sort_hoare(int *array, size_t size);
+void hoare_quick_sort(int *array, int start, int end);
+int hoare_partition(int *array, int start, int end);
 
 
 
