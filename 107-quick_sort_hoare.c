@@ -63,6 +63,7 @@ void hoare_quick_sort(int *array, int start, int end)
 /**
  * quick_sort_hoare - sorts an array of integers
  *
+ * @array: the array to sort
  * @size: the size of the array
  *
  * Return: Nothing
